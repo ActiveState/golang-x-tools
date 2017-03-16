@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#375EAB">
 {{with .Tabtitle}}
-  <title>{{html .}} - The Go Programming Language</title>
+  <title>{{html .}} - ActiveState ActiveGo 1.8 Beta</title>
 {{else}}
-  <title>The Go Programming Language</title>
+  <title>ActiveState ActiveGo 1.8 Beta</title>
 {{end}}
 <link type="text/css" rel="stylesheet" href="/lib/godoc/style.css">
 {{if .SearchBox}}
@@ -23,16 +23,18 @@
 </div><!-- #lowframe -->
 
 <div id="topbar"{{if .Title}} class="wide"{{end}}><div class="container">
-<div class="top-heading" id="heading-wide"><a href="/">The Go Programming Language</a></div>
-<div class="top-heading" id="heading-narrow"><a href="/">Go</a></div>
+<div class="top-heading" id="heading-wide"><a href="/"><img src="/doc/activestate.png" alt="Home">&nbsp;&nbsp;ActiveGo 1.8 Beta</a></div>
+<div class="top-heading" id="heading-narrow"><a href="/">ActiveGo</a></div>
 <a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
 <form method="GET" action="/search">
 <div id="menu">
-<a href="/doc/">Documents</a>
+<a href="/get/">Get ActiveGo</a>
+<a href="/start/">Get started</a>
+<!--<a href="/doc/">Documents</a>-->
 <a href="/pkg/">Packages</a>
-<a href="/project/">The Project</a>
-<a href="/help/">Help</a>
-<a href="/blog/">Blog</a>
+<!--<a href="/project/">The Project</a>-->
+<!--<a href="/help/">Help</a>-->
+<!--<a href="/blog/">Blog</a>-->
 {{if .Playground}}
 <a id="playgroundButton" href="http://play.golang.org/" title="Show Go Playground">Play</a>
 {{end}}
@@ -81,12 +83,10 @@ func main() {
 
 <div id="footer">
 Build version {{html .Version}}.<br>
-Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
-the content of this page is licensed under the
-Creative Commons Attribution 3.0 License,
-and code is licensed under a <a href="/LICENSE">BSD license</a>.<br>
-<a href="/doc/tos.html">Terms of Service</a> | 
-<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+Portions of this page are modifications based on work created and <a href="https://developers.google.com/readme/policies/">shared by Google</a>
+<br>and used according to terms described in the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons 3.0 Attribution License</a>.
+<br>
+&copy; 2017 ActiveState Software Inc. All rights reserved. <a href="/trademarks/">Trademarks</a>.
 </div>
 
 </div><!-- .container -->
