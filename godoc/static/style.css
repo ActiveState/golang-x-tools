@@ -18,8 +18,12 @@ pre {
 	line-height: 1.4em;
 	overflow-x: auto;
 }
+pre .eula {
+	background: white;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
 pre .comment {
-	color: #006600; /* dark green */ 
+	color: #006600; /* dark green */
 }
 pre .highlight,
 pre .highlight-comment,
@@ -258,7 +262,7 @@ div#menu > a,
 	background: white;
 	color: #333333; /* dark grey */
 	/* color: #375EAB;  deep blue */
-	
+
 }
 a#start,
 div#learn .buttons a,

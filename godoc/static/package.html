@@ -248,13 +248,13 @@
 	{{if eq $.Dirname "/src"}}
 		<div id="manual-nav">
 			<dl>
-				<dt><a href="#stdlib">Standard library</a></dt>
-				<dt><a href="#other">Other packages</a></dt>
-				<dd><a href="#subrepo">Sub-repositories</a></dd>
-				<dd><a href="#community">Community</a></dd>
+				<dt><a href="#stdlib">Standard library and community packages</a></dt>
+				<dt><a href="#other">Go sub-repository packages</a></dt>
+				<dd><a href="#community">Resources for additional community packages</a></dd>
 			</dl>
 		</div>
-		<h2 id="stdlib">Standard library</h2>
+		<h2 id="stdlib">Standard library and community packages included in ActiveGo</h2>
+		<p>For a complete list of package versions, or Git tags identifying the package contents, see ActiveGo-packages.txt in your ActiveGo root directory. </p>
 		<img class="gopher" src="/doc/gopher/pkg.png"/>
 	{{end}}
 
@@ -277,7 +277,7 @@
 					{{if .HasPkg}}
 						<tr>
 							<td class="pkg-name">
-								<a href="{{html .Path}}/">{{html .Path}}</a>
+								<a href="{{html .Path}}/{{html}}">{{html .Path}}</a>
 							</td>
 							<td class="pkg-synopsis">
 								{{html .Synopsis}}
@@ -287,7 +287,7 @@
 				{{else}}
 					<tr>
 						<td class="pkg-name" style="padding-left: {{multiply .Depth 20}}px;">
-							<a href="{{html .Path}}/">{{html .Name}}</a>
+							<a href="{{html .Path}}/{{html}}">{{html .Name}}</a>
 						</td>
 						<td class="pkg-synopsis">
 							{{html .Synopsis}}
@@ -300,38 +300,29 @@
 
 
 	{{if eq $.Dirname "/src"}}
-	<h2 id="other">Other packages</h2>
-
-	<h3 id="subrepo">Sub-repositories</h3>
+	<h2 id="other">Go sub-repository packages included in ActiveGo</h2>
 	<p>
-	These packages are part of the Go Project but outside the main Go tree.
+	These packages, installed with ActiveGo, are part of the Go Project but outside the main Go tree.
 	They are developed under looser <a href="/doc/go1compat">compatibility requirements</a> than the Go core.
-	Install them with "<a href="/cmd/go/#hdr-Download_and_install_packages_and_dependencies">go get</a>".
 	</p>
 	<ul>
-		<li><a href="//godoc.org/golang.org/x/benchmarks">benchmarks</a> — benchmarks to measure Go as it is developed.</li>
-		<li><a href="//godoc.org/golang.org/x/blog">blog</a> — <a href="//blog.golang.org">blog.golang.org</a>'s implementation.</li>
-		<li><a href="//godoc.org/golang.org/x/build">build</a> — <a href="//build.golang.org">build.golang.org</a>'s implementation.</li>
-		<li><a href="//godoc.org/golang.org/x/crypto">crypto</a> — additional cryptography packages.</li>
-		<li><a href="//godoc.org/golang.org/x/debug">debug</a> — an experimental debugger for Go.</li>
-		<li><a href="//godoc.org/golang.org/x/image">image</a> — additional imaging packages.</li>
-		<li><a href="//godoc.org/golang.org/x/mobile">mobile</a> — experimental support for Go on mobile platforms.</li>
-		<li><a href="//godoc.org/golang.org/x/net">net</a> — additional networking packages.</li>
-		<li><a href="//godoc.org/golang.org/x/sys">sys</a> — packages for making system calls.</li>
-		<li><a href="//godoc.org/golang.org/x/text">text</a> — packages for working with text.</li>
-		<li><a href="//godoc.org/golang.org/x/tools">tools</a> — godoc, goimports, gorename, and other tools.</li>
-		<li><a href="//godoc.org/golang.org/x/tour">tour</a> — <a href="//tour.golang.org">tour.golang.org</a>'s implementation.</li>
-		<li><a href="//godoc.org/golang.org/x/exp">exp</a> — experimental and deprecated packages (handle with care; may change without warning).</li>
+		<li><a href="/pkg/golang.org/x/crypto">crypto</a> — additional cryptography packages.</li>
+		<li><a href="/pkg/golang.org/x/image">image</a> — additional imaging packages.</li>
+		<li><a href="/pkg/golang.org/x/net">net</a> — additional networking packages.</li>
+		<li><a href="/pkg/golang.org/x/oauth2/index.html">oauth2</a> - packages for making OAuth2 authorized and authenticated HTTP requests</li>
+		<li><a href="/pkg/golang.org/x/sys">sys</a> — packages for making system calls.</li>
+		<li><a href="/pkg/golang.org/x/text">text</a> — packages for working with text.</li>
+		<li><a href="/pkg/golang.org/x/tools">tools</a> — godoc, goimports, gorename, and other tools.</li>
+		<li><a href="/pkg/golang.org/x/tour/">tour</a>: tour.golang.org's implementation</li>
 	</ul>
 
 	<h3 id="community">Community</h3>
 	<p>
-	These services can help you find Open Source packages provided by the community.
+	These services can help you find additional Open Source packages provided by the community that are not already included in ActiveGo.
 	</p>
 	<ul>
 		<li><a href="//godoc.org">GoDoc</a> - a package index and search engine.</li>
 		<li><a href="http://go-search.org">Go Search</a> - a code search engine.</li>
-		<li><a href="/wiki/Projects">Projects at the Go Wiki</a> - a curated list of Go projects.</li>
 	</ul>
 	{{end}}
 {{end}}
