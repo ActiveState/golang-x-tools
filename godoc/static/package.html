@@ -277,7 +277,7 @@
 					{{if .HasPkg}}
 						<tr>
 							<td class="pkg-name">
-								<a href="{{html .Path}}/{{html}}">{{html .Path}}</a>
+								<a href="{{html .Path}}/{{modeQueryString $.Mode | html}}">{{html .Path}}</a>
 							</td>
 							<td class="pkg-synopsis">
 								{{html .Synopsis}}
@@ -287,7 +287,7 @@
 				{{else}}
 					<tr>
 						<td class="pkg-name" style="padding-left: {{multiply .Depth 20}}px;">
-							<a href="{{html .Path}}/{{html}}">{{html .Name}}</a>
+							<a href="{{html .Path}}/{{modeQueryString $.Mode | html}}">{{html .Name}}</a>
 						</td>
 						<td class="pkg-synopsis">
 							{{html .Synopsis}}
@@ -309,11 +309,11 @@
 		<li><a href="/pkg/golang.org/x/crypto">crypto</a> — additional cryptography packages.</li>
 		<li><a href="/pkg/golang.org/x/image">image</a> — additional imaging packages.</li>
 		<li><a href="/pkg/golang.org/x/net">net</a> — additional networking packages.</li>
-		<li><a href="/pkg/golang.org/x/oauth2/index.html">oauth2</a> - packages for making OAuth2 authorized and authenticated HTTP requests</li>
+		<li><a href="/pkg/golang.org/x/oauth2">oauth2</a> — packages for making OAuth2 authorized and authenticated HTTP requests</li>
 		<li><a href="/pkg/golang.org/x/sys">sys</a> — packages for making system calls.</li>
 		<li><a href="/pkg/golang.org/x/text">text</a> — packages for working with text.</li>
 		<li><a href="/pkg/golang.org/x/tools">tools</a> — godoc, goimports, gorename, and other tools.</li>
-		<li><a href="/pkg/golang.org/x/tour/">tour</a>: tour.golang.org's implementation</li>
+		<li><a href="/pkg/golang.org/x/tour">tour</a> — tour.golang.org's implementation</li>
 	</ul>
 
 	<h3 id="community">Community</h3>
